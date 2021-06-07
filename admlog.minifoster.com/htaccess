@@ -1,0 +1,25 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+Options -Indexes
+
+DirectoryIndex index.php
+
+#order deny,Allow
+Deny from all
+#Allow from 27.62.252.26
+#ErrorDocument 403 /under_Maintenece/soon.html
+
+RewriteCond %{HTTP_REFERER} !^http://minifoster.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://minifoster.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.minifoster.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.minifoster.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://minifoster.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://minifoster.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.minifoster.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.minifoster.com$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+
