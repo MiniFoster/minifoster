@@ -63,7 +63,7 @@ textarea {height:100%;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing
 <div class="container">
     <p style="text-align: center;"><b><u>Feedback Form</u></b></p>
     <p>We would love to hear your thoughts, concerns or problems with anything so we can improve!</p><hr>
-    <form action="/post/feedbackPost" method="post">
+   <!-- <form action="/post/feedbackPost" method="post"> -->
        <label for="name">Name *</label><br>
        <input type="text" placeholder="First Name" id="name" name="fname" required>
        <input type="text" placeholder="Last Name" id="name" name="lname" required><br><br>
@@ -71,8 +71,8 @@ textarea {height:100%;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing
        <input type="email" placeholder="myname@example.com" id="e-mail" name="email" required><br><br>
        <label for="comment">FeedBack *</label><br>
        <textarea id="comment" name="feedback" maxlength="254" required></textarea><br><br>
-       <input style="border-color: green;" type="submit" value="Submit Feedback"> <!--id="btn-submit"-->
-    </form>
+       <input style="border-color: green;" type="submit" value="Submit Feedback" id="btn-submit">
+    <!--</form>-->
 </div>
 <script>
     $(document).ready(function() { 
