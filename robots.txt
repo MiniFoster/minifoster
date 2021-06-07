@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: 
+
+Sitemap: http://minifoster.com/sitemap.xml
+Sitemap: http://minifoster.com/sitemap-www.xml

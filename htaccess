@@ -1,0 +1,17 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+Options -Indexes
+
+DirectoryIndex home.php
+
+#order deny,Allow
+#Deny from all
+#Allow from 27.62.168.37
+ErrorDocument 403 /under_Maintenece/soon.html
+
+ErrorDocument 404 /404.shtml
+
